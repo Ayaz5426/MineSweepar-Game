@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="minesweeper.css">
+        <title>Minesweeper</title>
+    </head>
+    <body style="background: #bdffbd"  oncontextmenu="return false" >
+        <ul>        
+            <li>Flag :<span id="flag">10</span> </li>
+        </ul>
+        <div class="lev">
+            <button id="easy">EASY</button>
+            <button id="medium">MEDIUM</button>
+            <button id="hard">HARD</button>
+			<button id="restart">Restart</button>
+        </div>
+
+        <div class="discription">
+            <p>
+           Icon Descriptions:
+           </p>
+           <table>
+           
+           <tr>
+               <td><img src="images/win.gif" border="0"></td>
+               <td>You win! Awesome!</td>
+           </tr>
+           <tr>
+               <td><img src="images/blast.gif" border="0"></td>
+               <td>You lose...</td>
+           </tr>
+           <tr>
+               <td><img src="images/error.gif" border="0"></td>
+               <td>You have tagged a wrong place.</td>
+           </tr>
+           <tr>
+               <td><img src="images/flag.gif" border="0"></td>
+               <td>There is a mine here.</td>
+           </tr>
+           <tr>
+               <td><img src="images/bomb.gif" border="0"></td>
+               <td>This is a dangerous mine!</td>
+           </tr>
+           </table>
+           </div>
+           
+        <table id="table1" class="matrix">
+            <tbody>
+                <tr>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                    <td class="cell" id="9"></td>
+                    <td class="cell" id="10"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="11"></td>
+                    <td class="cell" id="12"></td>
+                    <td class="cell" id="13"></td>
+                    <td class="cell" id="14"></td>
+                    <td class="cell" id="15"></td>
+                    <td class="cell" id="16"></td>
+                    <td class="cell" id="17"></td>
+                    <td class="cell" id="18"></td>
+                    <td class="cell" id="19"></td>
+                    <td class="cell" id="20"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="21"></td>
+                    <td class="cell" id="22"></td>
+                    <td class="cell" id="23"></td>
+                    <td class="cell" id="24"></td>
+                    <td class="cell" id="25"></td>
+                    <td class="cell" id="26"></td>
+                    <td class="cell" id="27"></td>
+                    <td class="cell" id="28"></td>
+                    <td class="cell" id="29"></td>
+                    <td class="cell" id="30"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="31"></td>
+                    <td class="cell" id="32"></td>
+                    <td class="cell" id="33"></td>
+                    <td class="cell" id="34"></td>
+                    <td class="cell" id="35"></td>
+                    <td class="cell" id="36"></td>
+                    <td class="cell" id="37"></td>
+                    <td class="cell" id="38"></td>
+                    <td class="cell" id="39"></td>
+                    <td class="cell" id="40"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="41"></td>
+                    <td class="cell" id="42"></td>
+                    <td class="cell" id="43"></td>
+                    <td class="cell" id="44"></td>
+                    <td class="cell" id="45"></td>
+                    <td class="cell" id="46"></td>
+                    <td class="cell" id="47"></td>
+                    <td class="cell" id="48"></td>
+                    <td class="cell" id="49"></td>
+                    <td class="cell" id="50"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="51"></td>
+                    <td class="cell" id="52"></td>
+                    <td class="cell" id="53"></td>
+                    <td class="cell" id="54"></td>
+                    <td class="cell" id="55"></td>
+                    <td class="cell" id="56"></td>
+                    <td class="cell" id="57"></td>
+                    <td class="cell" id="58"></td>
+                    <td class="cell" id="59"></td>
+                    <td class="cell" id="60"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="61"></td>
+                    <td class="cell" id="62"></td>
+                    <td class="cell" id="63"></td>
+                    <td class="cell" id="64"></td>
+                    <td class="cell" id="65"></td>
+                    <td class="cell" id="66"></td>
+                    <td class="cell" id="67"></td>
+                    <td class="cell" id="68"></td>
+                    <td class="cell" id="69"></td>
+                    <td class="cell" id="70"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="71"></td>
+                    <td class="cell" id="72"></td>
+                    <td class="cell" id="73"></td>
+                    <td class="cell" id="74"></td>
+                    <td class="cell" id="75"></td>
+                    <td class="cell" id="76"></td>
+                    <td class="cell" id="77"></td>
+                    <td class="cell" id="78"></td>
+                    <td class="cell" id="79"></td>
+                    <td class="cell" id="80"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="81"></td>
+                    <td class="cell" id="82"></td>
+                    <td class="cell" id="83"></td>
+                    <td class="cell" id="84"></td>
+                    <td class="cell" id="85"></td>
+                    <td class="cell" id="86"></td>
+                    <td class="cell" id="87"></td>
+                    <td class="cell" id="88"></td>
+                    <td class="cell" id="89"></td>
+                    <td class="cell" id="90"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="91"></td>
+                    <td class="cell" id="92"></td>
+                    <td class="cell" id="93"></td>
+                    <td class="cell" id="94"></td>
+                    <td class="cell" id="95"></td>
+                    <td class="cell" id="96"></td>
+                    <td class="cell" id="97"></td>
+                    <td class="cell" id="98"></td>
+                    <td class="cell" id="99"></td>
+                    <td class="cell" id="100"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="table2" class="matrix_2" >
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+            <tr>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+                <td class="cell" ></td>
+            </tr>
+        </table>
+        <script type="text/javascript" src="minesweeper.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<div>
+    <p id="demo">hii</p>
+</div>
+</div>
+    </body>
+</html>
